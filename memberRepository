@@ -1,0 +1,26 @@
+package jpabook.jpashop;
+
+import jpabook.jpashop.domain.Member;
+import org.springframework.stereotype.Repository;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+@Repository //entity 찾아줌, dao와 비슷
+public class MemberRepository {
+
+    @PersistenceContext
+    private EntityManager em; //스프링부트가 어노테이션에 있으면 엔티티매니저를 주입을 해줌
+
+    public Long save(Member member){ //저장코드
+        em.persist(member);
+        return member.getId();
+        //cmd와 query를 분리하라는 원칙에서 저장을 하고나면 가급적 부작용을 일으키지 않기위해
+        //id정도만 return해줌
+    }
+
+    public Member find(Long id){ //조회하는 코드
+        return em.find(Member.class, id);
+    }
+
+}
