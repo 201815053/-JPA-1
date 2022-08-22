@@ -52,7 +52,7 @@ public class OrderController {
         return "order/orderList";
     }
 
-    @PostMapping("/orders/{orderId}/cancle")
+    @PostMapping("/orders/{orderId}/canc")
     public String cancelOrder(@PathVariable("orderId") Long orderId) {
         orderService.cancelOrder(orderId);
         return "redirect:/orders";
