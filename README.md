@@ -1,4 +1,4 @@
-# Hello shop
+# Hello shop: 실전! 스프링 부트와 JPA 활용1 - 웹 애플리케이션 개발 참고
 ## 요구사항 분석  
 ![image](https://user-images.githubusercontent.com/80056046/197429827-a5371af3-758e-4d5b-aec4-26a5b2e94d56.png)
 
